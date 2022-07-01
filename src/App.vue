@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <TheHeader/>
+    <TheFooter/>
   </div>
 </template>
 
 <script>
 import TheHeader from './components/TheHeader.vue';
+import TheFooter from './components/TheFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    TheHeader
+    TheHeader,
+    TheFooter
 }
 }
 </script>
@@ -23,7 +26,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 87px;
 }
 
 .primary-btn{
