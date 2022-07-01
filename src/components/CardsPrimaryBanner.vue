@@ -18,23 +18,25 @@
                     <h5>Find a partner</h5>
                 </div>
             </div>
-            <div class="mot col-65">
-                <h2>"How you respond to the challenge in the second half will determine what you become after
-                    the game, whether you are a winner or a loser."</h2>
-                <img src="../assets/img/sep.svg" class="separator mt-4 mb-2">
-                <div class="credit d-flex justify-content-center align-items-center gap-3">
-                    <img src="../assets/img/avatar-1-2x.jpg" alt="">
-                    <p class="text-light">Brad Johnson</p>
-                    <p>Las Vegas</p>
-                </div>
-            </div>
+            <H2Mot 
+            :h2="quote" 
+            :img="require('../assets/img/avatar-1-2x.jpg')" 
+            :whiteText="'Brad Johnson'"
+            :text="'Las Vegas'"
+            />
         </div>
     </div>
 </template>
 
 <script>
+import H2Mot from './H2Mot.vue';
 export default {
-
+    data(){
+        return{
+            quote: '"How you respond to the challenge in the second half will determine what you become after the game, whether you are a winner or a loser."'
+        }
+    },
+    components: { H2Mot }
 }
 </script>
 
@@ -81,31 +83,6 @@ export default {
         .training {
             background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(../assets/img/box3-2x.jpg);
         }
-    }
-
-    .mot{
-        padding: 0 1rem 3rem;
-        margin: auto;
-
-        h2{
-            color: white;
-            font-weight: bold;
-        }
-
-        .credit{
-            width: 100%;
-
-            img{
-                max-width: 40px;
-                border-radius: 50%;
-            }
-
-            p{
-                color: #bcbcbc;
-                margin-bottom: 0;
-            }
-        }
-
     }
 }
 </style>
