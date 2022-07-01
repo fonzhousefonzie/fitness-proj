@@ -6,7 +6,7 @@
                 <ul class="d-flex list-unstyled align-items-center mb-0 gap-4">
                     <li v-for="item in menu" :key="item" v-html="item"></li>
                 </ul>
-                <button class="primary-btn">Schedule a workout</button>
+                <button class="primary-btn small">Schedule a workout</button>
                 <div class="icons d-flex gap-4">
                     <i class="fa fa-solid fa-cart-shopping"></i>
                     <i class="fa fa-solid fa-magnifying-glass"></i>
@@ -35,6 +35,7 @@ export default {
 
 <style lang="scss" scoped>
     header{
+        z-index: 10;
         position: fixed;
         top: 0;
         left: 0;
