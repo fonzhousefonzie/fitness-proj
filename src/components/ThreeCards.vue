@@ -12,7 +12,7 @@
                     <button class="play-btn small" :class="{'d-none' : noButton}"><i class="fa fa-solid fa-play"></i></button>
                 </div>
                 <h6 class="mx-3 fw-bold">{{firstTitle}}</h6>
-                <p class="mx-3 fw-bold subtitle" :class="{'blue-sub' : blueSubtitles}">{{firstSubtitle}}</p>
+                <p class="mx-3 subtitle" :class="{'blue-sub' : blueSubtitles}">{{firstSubtitle}}</p>
             </div>
             <div class="col-30">
                 <div class="bg d-flex justify-content-center align-items-center" 
@@ -21,7 +21,7 @@
                     <button class="play-btn small" :class="{'d-none' : noButton}"><i class="fa fa-solid fa-play"></i></button>
                 </div>
                 <h6 class="mx-3 fw-bold">{{secondTitle}}</h6>
-                <p class="mx-3 fw-bold subtitle" :class="{'blue-sub' : blueSubtitles}">{{secondSubtitle}}</p>
+                <p class="mx-3 subtitle" :class="{'blue-sub' : blueSubtitles}">{{secondSubtitle}}</p>
             </div>
             <div class="col-30">
                 <div class="bg d-flex justify-content-center align-items-center" 
@@ -30,7 +30,7 @@
                     <button class="play-btn small" :class="{'d-none' : noButton}"><i class="fa fa-solid fa-play"></i></button>
                 </div>
                 <h6 class="mx-3 fw-bold">{{thirdTitle}}</h6>
-                <p class="mx-3 fw-bold subtitle" :class="{'blue-sub' : blueSubtitles}">{{thirdSubtitle}}</p>
+                <p class="mx-3 subtitle" :class="{'blue-sub' : blueSubtitles}">{{thirdSubtitle}}</p>
             </div>
         </div>
     </div>
@@ -73,6 +73,7 @@ export default {
 
         .blue-sub{
             color: var(--blue);
+            font-weight: bold;
         }
     }
 </style>

@@ -10,6 +10,7 @@
                 <button class="primary-btn fw-bold" v-html="primaryButton">
                 </button>
                 <span v-html="secondElement"></span>
+                <h6 class="my-4">{{p1}}</h6>
             </div>
             <div class="col-30 d-flex justify-content-center align-items-center" v-html="smallColElement">
                 
@@ -28,6 +29,7 @@ export default {
         firstElement: Element,
         primaryButton: Element,
         secondElement: Element,
+        p1: String,
         smallColElement: Element
     }
 }

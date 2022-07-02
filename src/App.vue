@@ -5,6 +5,9 @@
     <CardsPrimaryBanner />
     <YoutubeSection />
     <FeaturedSection/>
+    <MailingList/>
+    <BlueCardsBanner/>
+    <LatestSection/>
     <TheFooter />
   </div>
 </template>
@@ -16,6 +19,9 @@ import JumboTron from './components/JumboTron.vue';
 import CardsPrimaryBanner from './components/CardsPrimaryBanner.vue';
 import YoutubeSection from './components/YoutubeSection.vue';
 import FeaturedSection from './components/FeaturedSection.vue';
+import MailingList from './components/MailingList.vue';
+import BlueCardsBanner from './components/BlueCardsBanner.vue';
+import LatestSection from './components/LatestSection.vue';
 
 export default {
   name: 'App',
@@ -25,7 +31,10 @@ export default {
     JumboTron,
     CardsPrimaryBanner,
     YoutubeSection,
-    FeaturedSection
+    FeaturedSection,
+    MailingList,
+    BlueCardsBanner,
+    LatestSection
 }
 }
 </script>
@@ -133,6 +142,13 @@ button.small {
 
 .play-btn.small{
   padding: 1rem 1.3rem 1rem 1rem;
+}
+
+input[type="email"]{
+  border: none;
+  outline: none;
+  padding: 1.2em 1.7em;
+  border-radius: 3rem;
 }
 
 .active {
