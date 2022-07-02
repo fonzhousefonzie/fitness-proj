@@ -40,16 +40,16 @@ export default {
         top: 0;
         left: 0;
         right: 0;
-        background: #060606;
+        background: var(--black);
         min-height: 60px;
         padding: 1.5rem;
-        color: #bcbcbc;
+        color: var(--light-grey);
     }
 
     li, i{
         cursor: pointer;
         &:hover{
-            color: #709e9c;
+            color: var(--dark-grey);
         }
     }
 </style>

@@ -53,16 +53,16 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-    background: #060606;
+    background: var(--black);
     color: white;
 }
 
 .social-icons i{
-    color: #ec5a57;
+    color: var(--red);
     padding: 0 0.5rem;
     cursor: pointer;
     &:hover{
-        color: #f78280;
+        color: var(--lighter-red);
         transform: scale(120%);
     }
 }
@@ -74,13 +74,13 @@ h6{
 .posts{
     cursor: pointer;
     &:hover{
-        color: #bcbcbc;
+        color: var(--light-grey);
     }
 }
 
 span{
     display: inline-block;
-    color: #bcbcbc;
+    color: var(--light-grey);
     cursor: pointer;
     &:hover{
         color: white;
@@ -88,10 +88,10 @@ span{
 }
 
 .copyright{
-    color: #78787a;
+    color: var(--dark-grey);
     font-size: 0.8rem;
     padding: 2rem;
-    border-top: 1px solid #78787a;
+    border-top: 1px solid var(--dark-grey);
     p{
         padding: 0;
         margin: 0;

@@ -1,11 +1,11 @@
 <template>
-    <div class="mot col-65">
+    <div class="mot">
         <h2>{{h2}}</h2>
         <img src="../assets/img/sep.svg" class="separator mt-4 mb-2">
         <div class="credit d-flex justify-content-center align-items-center gap-3">
             <img :src="img" alt="">
-            <p class="text-light">{{whiteText}}</p>
-            <p>{{text}}</p>
+            <h6 class="text-light">{{whiteText}}</h6>
+            <h6>{{text}}</h6>
         </div>
         <div v-html="element" class="element"></div>
     </div>
@@ -25,8 +25,9 @@ export default {
 
 <style lang="scss" scoped>
 .mot {
-    padding: 0 1rem 3rem;
+    padding: 2rem 0 3rem;
     margin: auto;
+    width: 75%;
 
     h2 {
         color: white;
@@ -37,13 +38,17 @@ export default {
         width: 100%;
 
         img {
-            max-width: 40px;
+            max-width: 60px;
             border-radius: 50%;
         }
 
-        p {
-            color: #bcbcbc;
+        h6 {
+            color: var(--light-grey);
             margin-bottom: 0;
+        }
+
+        h6.text-light{
+            font-weight: bold;
         }
     }
 

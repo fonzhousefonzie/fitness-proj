@@ -1,5 +1,5 @@
 <template>
-    <div class="jumbotron">
+    <div class="section position-relative">
         <div class="absolute-buttons-container">
             <div class="squared-button">
                 <img src="../assets/img/demos-icon.svg">
@@ -10,98 +10,78 @@
                 <p>On Sale</p>
             </div>
         </div>
-        <div class="container py-5 text-start d-flex">
-            <div class="col-65">
-                <h5>Certified fitness professional</h5>
-                <h1>Take control of your health</h1>
-                <img src="../assets/img/sep.svg" class="separator my-4">
-                <p class="mb-4">Curatibur non nulla sit amet nisl tempus convalis quis ac lectus dolor sit amet.</p>
-                <button class="primary-btn fw-bold">
-                    <i class="fa fa-brands fa-youtube"></i> Visit my YouTube channel
-                </button>
-                <button class="secondary-btn fw-bold ms-3">
-                    Buy Avada today <i class="fa fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-            <div class="col-30 d-flex justify-content-center align-items-center">
-                <button class="play-btn"><i class="fa fa-solid fa-play"></i></button>
-            </div>
-        </div>
+        <FadedBanner
+        :bg-image="bgImg"
+        :h5="'Certified fitness professional'"
+        :h1="'Take control of your health'"
+        :p="'Curatibur non nulla sit amet nisl tempus convalis quis ac lectus dolor sit amet.'"
+        :primary-button="primButton"
+        :second-element="secButton"
+        :small-col-element="playButton"
+        />
     </div>
 </template>
 
 <script>
+import FadedBanner from "./FadedBanner.vue";
 export default {
-
+    data(){
+        return{
+            bgImg: require('../assets/img/slider82x-scaled.jpg'),
+            primButton: '<i class="fa fa-brands fa-youtube"></i> Visit my YouTube channel',
+            secButton: '<button class="secondary-btn fw-bold ms-3">Buy Avada today <i class="fa fa-solid fa-arrow-right"></i></button>',
+            playButton: '<button class="play-btn"><i class="fa fa-solid fa-play"></i></button>'
+        }
+    },
+    components: { FadedBanner }
 }
 </script>
 
 <style lang="scss" scoped>
-.jumbotron {
-    position: relative;
-    margin-top: 86px;
-    background: linear-gradient(90deg, #060606, #060606, rgba(0, 0, 0, 0.2), transparent), url(../assets/img/slider82x-scaled.jpg);
-    background-position: center, top right;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #78787a;
-    padding: 3rem 0 5rem;
+.section{
+    padding-top: 86px;
+}
 
-    .col-65 {
+.absolute-buttons-container {
+    position: absolute;
+    right: 1.5rem;
+    top: calc(1.5rem + 86px);
 
-        h5 {
-            color: #ec5a57;
-            font-weight: bold;
+    .squared-button {
+        background: white;
+        color: var(--darker);
+        padding: 0.5rem;
+        font-size: 0.6rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        width: 55px;
+        height: 55px;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        transition: 200ms ease-out;
+
+        img {
+            max-width: 100%;
+            margin: 0.2rem 0.5rem;
         }
 
-        h1 {
-            color: white;
+        h4 {
             font-weight: bold;
+            color: var(--lighter);
+            margin-bottom: 0;
+
+            span {
+                font-size: 1rem;
+                vertical-align: top;
+            }
         }
-    }
 
-    .col-30{
-        width: 30%;
-    }
+        p {
+            margin-bottom: 0;
+        }
 
-    .absolute-buttons-container{
-        position: absolute;
-        right: 0.5rem;
-        top: 1.5rem;
-
-        .squared-button{
-            background: white;
-            color: #a00644;
-            padding: 0.5rem;
-            font-size: 0.6rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            width: 55px;
-            height: 55px;
-            border-radius: 0.3rem;
-            cursor: pointer;
-            transition: 200ms ease-out;
-
-            img{
-                max-width: 100%;
-                margin: 0.2rem 0.5rem;
-            }
-            h4{
-                font-weight: bold;
-                color: #b6967e;
-                margin-bottom: 0;
-                span{
-                    font-size: 1rem;
-                    vertical-align: top;
-                }
-            }
-            p{
-                margin-bottom: 0;
-            }
-
-            &:hover{
-                transform: scale(110%);
-            }
+        &:hover {
+            transform: scale(110%);
         }
     }
 }
